@@ -10,6 +10,6 @@ Small projects.
 
 Projectos pequeños.
 
-  1 - Dia del juicio cuestionario
+  1 - Cuestionario del dia del jucio
   
   2 - Simulación de multiples cuerpos: La versión 2D fue creada originalmente por Grand Master Taco. <a href="https://www.youtube.com/watch?v=H8OBbCtSQnI">Video en youtube (Inglés)</a>, <a href="https://github.com/DiscipleTaquito/Taco-Projects">Pagina de GitHub</a>. Nota: el código del video no está en la página de github. He modificado el código del video, añadiendo comentarions y luego he creado una versión "3D".
