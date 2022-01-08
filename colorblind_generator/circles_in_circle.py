@@ -43,9 +43,12 @@ def get_array_from_image():
     return np.array(img)
 
 def main_init():
+
+    # This is one of the main parameters that you want to change
+    number_of_circles = 1000
+
     # Generate the circle objects
     circle_obj_list = list()
-    number_of_circles = 1000
     # Invisible circle in which all the circles are going to live
     big_circle = Circle((450, 450), 400, "white")
     # Count how many times do we fail
