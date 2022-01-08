@@ -44,8 +44,13 @@ def get_array_from_image():
 
 def main_init():
 
-    # This is one of the main parameters that you want to change
+    # This this are the parameters that you want to change
     number_of_circles = 1000
+    current_radius = 10
+    # Minimum radius, the program is going to reduce the radius until this number is reached
+    minimum_radius = 2
+    # How many times it tries to find a suitable position (so that the circles do not overlap)
+    max_fails = 500
 
     # Generate the circle objects
     circle_obj_list = list()
@@ -53,7 +58,6 @@ def main_init():
     big_circle = Circle((450, 450), 400, "white")
     # Count how many times do we fail
     fails = 0
-    current_radius = 10
 
     while number_of_circles > 0:
         # Choose a random point within the big circle
@@ -82,16 +86,13 @@ def main_init():
             # Reset fails and radius. Test what is the difference with reseting and not reseting the radius
             fails = 0
             #current_radius = 19
-        # if it fails alot reduce the size of the circle
-        if fails >= 500:
+        # If it fails a lot reduce the size of the circle
+        if fails >= max_fails:
             current_radius -= 1
             fails = 0
             #print(f"     Radius reduced, new radius {current_radius}")
-            #if fails >= 1000:
-                #print("Can't make it, door stuck!")
-                #break
         # We do not want a radius that is less than zero
-        if current_radius <= 2:
+        if current_radius <= minimum_radius:
             print("Radius got too small")
             break
     # Loop through the circles to determine which to change their color
