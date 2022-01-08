@@ -4,7 +4,6 @@ any word and hide it in there
 """
 import numpy as np
 import tkinter as tk
-from time import sleep
 from PIL import Image
 
 from numpy.core.fromnumeric import size
