@@ -11,7 +11,7 @@ from numpy.core.fromnumeric import size
 rng = np.random.default_rng()
 # https://tkdocs.com/shipman/colors.html
 basic_colors = ('white', 'black', 'red', 'green', 'blue', 'cyan', 'yellow', 'magenta')
-colorblind_colors = ("#B5CA8D", "#F7A278", "#B09C88")
+colorblind_colors = ("#3EC907", "#65A607", "#8D8E04", "#D34107", "#A52D18") #("#B5CA8D", "#F7A278", "#B09C88")
 
 class Circle:
     def __init__(self, position, radius, color) -> None:
@@ -22,7 +22,7 @@ class Circle:
     def is_overlapping(self, _o) -> bool:
         """A function to determine if two circle objects are overlapping"""
         distance = np.linalg.norm(self.position - _o.position)
-        if distance <= self.radius + _o.radius:
+        if distance <= 2 + self.radius + _o.radius:
             return True
         else:
             return False
@@ -74,7 +74,7 @@ def main_init():
         new_circle = Circle(
             position=random_point,
             radius=current_radius, #radius=rng.integers(10, 15), 
-            color=colorblind_colors[rng.integers(0, 2)]#color=basic_colors[rng.integers(1, 7)]
+            color=colorblind_colors[rng.integers(0, 4)]#color=basic_colors[rng.integers(1, 7)]
             )
         #print("     ", new_circle.position)
         # If the circle is overlapping or too far away repeat
