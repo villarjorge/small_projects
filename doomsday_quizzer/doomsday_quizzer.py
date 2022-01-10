@@ -60,7 +60,7 @@ def create_date():
 def get_answer(rand_year, rand_month, rand_day, date_object):
     """Asks the question and handles the response"""
     print(f"Date: {date_object} or {rand_day} of {months_num_to_name[rand_month]} of {rand_year}")
-    
+    # If you want to cheat you can uncomment the line below and coment the other print, this will the answer in black next to the question
     #print(f"{Back.BLACK}What day of the week was that, by name?{Fore.BLACK}{date_object.weekday()+1}{Style.RESET_ALL} ")
     print(f"What day of the week was that, by name?")
     answer = input().capitalize()
